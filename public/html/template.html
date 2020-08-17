@@ -1,20 +1,4 @@
-<script>
-    async function postData() {
-        const result = await fetch('https://oron-web-component-wrapper.herokuapp.com/data', { method: 'POST'});
-        const json = await result.json();
-        console.error( json.data);
-    }
-    fetch('https://oron-web-component-wrapper.herokuapp.com/data').then(res => res.json()).then(json => {
-        document.getElementsByTagName('my-paragraph')[0].innerHTML = json.data.allow ? 'GET pass' : 'FAIL TO GET!!!!';
-        console.info( json.data);
-    })
-    postData();
 
-    function load () {
-        debugger;
-    }
-
-</script>
 <template id="my-paragraph" onload="load()">
     <style>
         p {
@@ -24,4 +8,7 @@
         }
     </style>
     <p id="p-content">My paragraph</p>
+    <script>
+        console.log('??')
+    </script>
 </template>
