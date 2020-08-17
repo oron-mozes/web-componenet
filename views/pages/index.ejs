@@ -5,19 +5,5 @@
 
 <body>
 <h1>Hello Web Component</h1>
-<script>
-    async function getData() {
-        const result = await fetch('https://oron-web-component-wrapper.herokuapp.com/data');
-        const data = await result.json();
-        console.info(data);
-    }
-    async function postData() {
-        const result = await fetch('https://oron-web-component-wrapper.herokuapp.com/data', { method: 'POST'});
-        const data = await result.json();
-        console.error(data);
-    }
-    getData();
-    postData();
-</script>
 </body>
 </html>
