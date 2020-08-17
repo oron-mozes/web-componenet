@@ -1,15 +1,3 @@
-<template id="my-paragraph" onload="function load () {
-    console.log('LOSD!!!')
-}"
-          }>
-    <style>
-        p {
-            color: white;
-            background-color: #666;
-            padding: 5px;
-        }
-    </style>
-    <p id="p-content">My paragraph</p>
 <script>
     async function postData() {
         const result = await fetch('https://oron-web-component-wrapper.herokuapp.com/data', { method: 'POST'});
@@ -22,4 +10,15 @@
     })
     postData();
 </script>
+<template id="my-paragraph" onload="() => {
+    console.log('LOSD!!!')
+}">
+    <style>
+        p {
+            color: white;
+            background-color: #666;
+            padding: 5px;
+        }
+    </style>
+    <p id="p-content">My paragraph</p>
 </template>
